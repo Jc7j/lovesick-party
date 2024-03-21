@@ -1,0 +1,9 @@
+@import './base.css';
+
+#app {
+  background-color: #fffff7;
+  background-image: url('/wavy-background.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
