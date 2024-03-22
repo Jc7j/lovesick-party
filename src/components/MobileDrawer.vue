@@ -1,22 +1,22 @@
 <script setup>
-import { ref } from 'vue';
-import useMobile from '../utils/useMobile';
+import { ref } from 'vue'
+import useMobile from '../utils/useMobile'
 
-const { isMobile } = useMobile();
-const isTextVisible = ref(false);
+const { isMobile } = useMobile()
+const isTextVisible = ref(false)
 
-const imageSrc = ref('/menu-icon.png');
+const imageSrc = ref('/menu-icon.png')
 
 const toggleText = () => {
-  isTextVisible.value = !isTextVisible.value;
-  imageSrc.value = isTextVisible.value ? '/x-icon.png' : '/menu-icon.png';
-};
+  isTextVisible.value = !isTextVisible.value
+  imageSrc.value = isTextVisible.value ? '/x-icon.png' : '/menu-icon.png'
+}
 </script>
 
 <template>
   <div v-if="isMobile" class="container">
     <button @click="toggleText">
-      <img :src="imageSrc" alt="menu-icon"/>
+      <img :src="imageSrc" alt="menu-icon" />
     </button>
     <p v-if="isTextVisible" class="menu-text">Menu Text Here</p>
   </div>

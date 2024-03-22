@@ -12,7 +12,10 @@ const splitText = computed(() => text.split(''))
 <template>
   <section class="container">
     <div class="top-bar">
-      <p class="description">VIVID FUN K-POP CENTRIC PARTY WITH TONS OF FUN BLAH BLAH BLAH BLAH</p>
+      <p class="description">
+        DANCE THE NIGHT AWAY TO THE GENERES BIGGEST HITS & HIDDEN GEMS, IMMERSED IN A HIGH-ENERGY &
+        PRODUCTION EXPERIENCE
+      </p>
 
       <div class="icons" v-if="!isMobile">
         <a href="https://www.instagram.com/lovesickparty/" target="_blank"
@@ -40,6 +43,7 @@ const splitText = computed(() => text.split(''))
       <a href="https://posh.vip/f/9ecc" target="_blank">
         <img src="/LOVESICK--SQ--PHASE2.png" alt="LoveSick Poster" class="lovesick-poster" />
       </a>
+      <a href="https://posh.vip/f/9ecc" target="_blank" class="ticket-link"> Get Tickets! </a>
     </div>
 
     <div class="next-event">
@@ -74,7 +78,7 @@ const splitText = computed(() => text.split(''))
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .icons {
@@ -106,6 +110,7 @@ const splitText = computed(() => text.split(''))
   animation: wave 1.3s infinite ease-in;
   font-weight: bold;
   font-size: 2.5rem;
+  color:var(--lovesick-blue);
 }
 
 .hero-subtitle {
@@ -120,6 +125,13 @@ const splitText = computed(() => text.split(''))
   border-radius: 5%;
   opacity: 0;
   animation: fadeInFromBottom 2s ease-out forwards 2s;
+}
+
+.ticket-link {
+  text-decoration: none;
+  border-radius: 8%;
+  padding: 5px;
+  background-color: var(--lovesick-yellow);
 }
 
 .next-event {
@@ -178,7 +190,7 @@ const splitText = computed(() => text.split(''))
   }
 
   .description {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .letter {
@@ -194,9 +206,8 @@ const splitText = computed(() => text.split(''))
   .container {
     max-width: 640px;
   }
-
   .description {
-    width: 30rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -217,8 +228,8 @@ const splitText = computed(() => text.split(''))
   }
 
   .description {
-    width: 33rem;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    width: 80%;
   }
 
   .letter {

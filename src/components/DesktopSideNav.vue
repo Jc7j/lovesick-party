@@ -37,6 +37,10 @@ const { isMobile } = useMobile()
   animation: fadeInFromLeft 2s ease-out forwards 2s;
 }
 
+.list {
+  margin-bottom: 1.2rem;
+}
+
 @keyframes fadeInFromLeft {
   0% {
     opacity: 0;
