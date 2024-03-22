@@ -1,11 +1,11 @@
-<script setup lang="ts">
+<script setup>
+import DesktopSideNav from '@/components/DesktopSideNav.vue'
 import HeroLoveSick from '@/components/HeroLoveSick.vue'
-import SideNav from '@/components/SideNav.vue'
 </script>
 
 <template>
   <main id="layout">
-    <SideNav />
+    <DesktopSideNav />
     <HeroLoveSick />
   </main>
 </template>
