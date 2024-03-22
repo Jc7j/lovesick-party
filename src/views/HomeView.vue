@@ -10,4 +10,8 @@ import SideNav from '@/components/SideNav.vue'
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+#layout {
+  position: relative;
+}
+</style>

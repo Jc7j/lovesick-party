@@ -1,6 +1,8 @@
 <script setup>
 import { computed } from 'vue'
+import useMobile from '../utils/useMobile' // Adjust the path according to your file structure
 
+const { isMobile } = useMobile()
 const text = 'LOVESICK'
 const splitText = computed(() => text.split(''))
 </script>
@@ -23,7 +25,7 @@ const splitText = computed(() => text.split(''))
     <div class="description">
       <p>VIVID FUN K-POP CENTRIC PARTY WITH TONS OF FUN BLAH BLAH BLAH BLAH</p>
     </div>
-    <div class="icons">
+    <div class="icons" v-if="!isMobile">
       <a href="https://www.instagram.com/lovesickparty/" target="_blank"
         ><img class="icon" src="/instagram-icon.png" alt="instagram icon"
       /></a>
