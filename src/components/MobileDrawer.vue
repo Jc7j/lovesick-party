@@ -30,6 +30,10 @@ const toggleText = () => {
   text-align: end;
 }
 
+img {
+  width: 30px;
+}
+
 button {
   background: transparent;
   border: none;
@@ -41,14 +45,10 @@ button {
   text-align: right;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-20px);
-  transition: opacity 0.5s, transform 0.5s, visibility 0s 0.5s; /* Delay visibility transition */
 }
 
 .container .menu-text {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
-  transition: opacity 0.5s, transform 0.5s; /* No delay on becoming visible */
 }
 </style>
