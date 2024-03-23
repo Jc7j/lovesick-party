@@ -65,7 +65,8 @@ const splitText = computed(() => text.split(''))
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 100vh;
+  height: 90vh;
+  position: relative;
 }
 
 .top-bar {
@@ -132,6 +133,8 @@ const splitText = computed(() => text.split(''))
   border-radius: 8%;
   padding: 5px;
   background-color: var(--lovesick-yellow);
+  opacity: 0;
+  animation: fadeInFromBottom 2s ease-out forwards 2s;
 }
 
 .next-event {
@@ -142,7 +145,7 @@ const splitText = computed(() => text.split(''))
   font-size: 1.3rem;
   height: 20vh;
   opacity: 0;
-  animation: fadeInFromBottom 2s ease-out forwards 2s;
+  animation: fadeInFromRight 2s ease-out forwards 2s;
 }
 
 @keyframes wave {
@@ -155,6 +158,16 @@ const splitText = computed(() => text.split(''))
   0% {
     opacity: 0;
     transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
   }
   100% {
     opacity: 1;
