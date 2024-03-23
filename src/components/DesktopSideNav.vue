@@ -23,7 +23,7 @@ const { isMobile } = useMobile()
 }
 
 .lists {
-  position: fixed;
+  position: sticky;
   top: 0;
   bottom: 0;
   color: white;
