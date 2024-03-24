@@ -65,7 +65,6 @@ const splitText = computed(() => text.split(''))
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 90vh;
   position: relative;
 }
 
@@ -73,7 +72,6 @@ const splitText = computed(() => text.split(''))
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
-  height: 15vh;
   opacity: 0;
   animation: fadeInFromLeft 2s ease-out forwards 2s;
 }
@@ -98,12 +96,10 @@ const splitText = computed(() => text.split(''))
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 60vh;
 }
 
 .header-title {
   position: inline-block;
-  animation: moveFromInitial 2s ease-in forwards 2s;
 }
 
 .letter {
@@ -143,7 +139,6 @@ const splitText = computed(() => text.split(''))
   align-items: start;
   text-align: center;
   font-size: 1.3rem;
-  height: 15vh;
   opacity: 0;
   animation: fadeInFromRight 2s ease-out forwards 2s;
 }
@@ -236,6 +231,7 @@ const splitText = computed(() => text.split(''))
 
   .header-title {
     position: absolute;
+    animation: moveFromInitial 2s ease-in forwards 2s;
   }
 }
 

@@ -23,7 +23,9 @@
   margin-right: auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  height: 5vh;
+  height: 10vh;
+  opacity: 0;
+  animation: fadeInFromBottom 2s ease-out forwards 2s;
 }
 
 .inner {
@@ -44,6 +46,17 @@
   width: 30px;
   height: 30px;
   margin: 0.5rem 0.5rem;
+}
+
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 475px) {

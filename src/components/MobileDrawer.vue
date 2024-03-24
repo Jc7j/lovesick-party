@@ -18,7 +18,7 @@ const toggleText = () => {
     <button @click="toggleText">
       <img :src="imageSrc" alt="menu-icon" />
     </button>
-    <p v-if="isTextVisible" class="menu-text">Menu Text Here</p>
+    <p v-if="isTextVisible" class="menu-text">Menu Items Here</p>
   </div>
 </template>
 
