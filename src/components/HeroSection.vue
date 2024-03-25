@@ -1,268 +1,182 @@
 <script setup>
-import { computed } from 'vue'
 import useMobile from '../utils/useMobile'
-import MobileDrawer from '@/components/MobileDrawer.vue'
 
 const { isMobile } = useMobile()
-
-const text = 'LOVESICK'
-const splitText = computed(() => text.split(''))
 </script>
 
 <template>
-  <section class="container">
-    <div class="top-bar">
-      <p class="description">
-        DANCE THE NIGHT AWAY TO THE GENERES BIGGEST HITS & HIDDEN GEMS, IMMERSED IN A HIGH-ENERGY &
-        PRODUCTION EXPERIENCE
-      </p>
-
-      <div class="icons" v-if="!isMobile">
-        <a href="https://www.instagram.com/lovesickparty/" target="_blank"
-          ><img class="icon" src="/instagram-icon.png" alt="instagram icon"
-        /></a>
-        <a href="mailto:info@lovesickparty.com"
-          ><img class="icon" src="/gmail-icon.png" alt="gmail icon"
-        /></a>
-      </div>
-
-      <MobileDrawer />
+  <section class="hero container">
+    <h1 class="header">THE LOVESICK PARTY</h1>
+    <div class="date-time">
+      <span>
+        <p class="info-title">DATE</p>
+        <p class="info">03.15.24</p>
+      </span>
+      <span>
+        <p class="info-title">TIME</p>
+        <p class="info">opens 9pm</p>
+      </span>
     </div>
 
-    <div class="main-display">
-      <h1 class="header-title">
-        <span
-          v-for="(letter, index) in splitText"
-          :key="index"
-          class="letter"
-          :style="{ 'animation-delay': `${index * 0.1}s` }"
-          >{{ letter }}</span
-        >
-      </h1>
-      <p class="hero-subtitle">K-POP PARTY</p>
-      <a href="https://posh.vip/f/9ecc" target="_blank">
-        <img src="/LOVESICK--SQ--PHASE2.png" alt="LoveSick Poster" class="lovesick-poster" />
+    <div class="border"></div>
+
+    <p class="description">
+      IMMERSE YOURSELF IN THE SENSATIONAL WORLD OF KOREAN POP AT OUR 18+ K-POP PARTY
+    </p>
+
+    <div v-if="isMobile" class="mobile-main-display">
+      <a class="" href="https://posh.vip/f/9ecc" target="_blank">
+        <img src="/lovesick-poster.png" alt="lovesick promotional poster" />
       </a>
-      <a href="https://posh.vip/f/9ecc" target="_blank" class="ticket-link"> Get Tickets! </a>
+
+      <a href="https://posh.vip/f/9ecc" target="_blank" class="get-ticket">TICKETS</a>
     </div>
 
-    <div class="next-event">
-      <div></div>
+    <div v-if="!isMobile" class="desktop-main-display">
       <div>
-        <p>Coming up</p>
-        <strong>The Hard Rock Cafe</strong>
-        <p>March 15th</p>
-        <p>3771 Las Vegas BLVD @ Hard Rock Cafe</p>
+        <p class="display-sub">@ 3771 LAS VEGAS BLVD</p>
+        <p class="display-title">HARD ROCK <br/> LIVE</p>
+        <a href="https://posh.vip/f/9ecc" target="_blank" class="get-ticket">TICKETS</a>
       </div>
+
+      <a href="https://posh.vip/f/9ecc" target="_blank">
+        <img src="/lovesick-poster.png" alt="lovesick promotional poster" />
+      </a>
+
+      <div>
+        <p class="display-sub">HANG OUT</p>
+        <p class="display-title">RESERVE <br/> NOW</p>
+        <a href="https://posh.vip/f/9ecc" target="_blank" class="get-ticket">TICKETS</a>
+      </div>
+    </div>
+
+    <div class="border"></div>
+    <div class="amenities">
+      <p>DJ'S</p>
+      <p>DRINKS</p>
+      <p>FOODS</p>
+      <p>MERCH</p>
     </div>
   </section>
 </template>
 
 <style scoped>
-.container {
+img {
+  margin-top: 1rem;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  position: relative;
+  border-radius: 20px;
+  margin-bottom: 2rem;
 }
 
-.top-bar {
+a {
+  text-decoration: none;
+  color: #f364a2;
+}
+
+.hero {
   display: flex;
-  justify-content: space-between;
-  padding-top: 1rem;
-  opacity: 0;
-  animation: fadeInFromLeft 2s ease-out forwards 2s;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  color: #f364a2;
+  font-size: 1.5rem;
+}
+
+.header {
+  color: #e8368f;
+  font-size: 3.75rem;
+  margin-top: 1rem;
+}
+
+.date-time {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.info-title,
+.info {
+  margin: -0.5rem 0;
+}
+
+.info {
+  font-size: 2.25rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 2rem;
 }
 
-.icons {
+.border {
+  border: 1.5px solid #f364a2;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.mobile-main-display {
+  margin-bottom: 1.5rem;
+}
+
+.desktop-main-display {
   display: flex;
-}
-
-.icon {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: 0.5rem 0.5rem;
-}
-
-.main-display {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
-.header-title {
-  position: inline-block;
+.desktop-main-display p {
+  margin-bottom: .5rem;
 }
 
-.letter {
-  display: inline-block;
-  animation: wave 1.3s infinite ease-in;
+.display-title {
   font-weight: bold;
-  font-size: 2.5rem;
-  color: var(--lovesick-blue);
+  font-size: 2.25rem;
+  margin-top: -1rem;
 }
 
-.hero-subtitle {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  opacity: 0;
-  animation: fadeInFromBottom 2s ease-out forwards 2s;
+.display-sub {
+  font-size: 1rem;
 }
 
-.lovesick-poster {
-  width: 22rem;
-  border-radius: 5%;
-  opacity: 0;
-  animation: fadeInFromBottom 2s ease-out forwards 2s;
+.get-ticket {
+  border: 2px solid #f364a2;
+  padding: 1rem 5rem;
+  border-radius: 4rem;
 }
 
-.ticket-link {
-  text-decoration: none;
-  border-radius: 8%;
-  padding: 5px;
-  background-color: var(--lovesick-yellow);
-  opacity: 0;
-  animation: fadeInFromBottom 2s ease-out forwards 2s;
+.get-ticket:hover {
+  color: white;
+  background-color: #f364a2;
 }
 
-.next-event {
+.amenities {
   display: flex;
-  justify-content: center;
-  align-items: start;
-  text-align: center;
-  font-size: 1.3rem;
-  opacity: 0;
-  animation: fadeInFromRight 2s ease-out forwards 2s;
-}
-
-@keyframes wave {
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes fadeInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes fadeInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInFromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes moveFromInitial {
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    bottom: 0;
-    left: 1rem;
-  }
-}
-
-@media (min-width: 475px) {
-  .container {
-    max-width: 475px;
-  }
-
-  .description {
-    font-size: 1.5rem;
-  }
-
-  .letter {
-    font-size: 3rem;
-  }
-
-  .lovesick-poster {
-    width: 27rem;
-  }
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-  .description {
-    font-size: 1.8rem;
-  }
+  justify-content: space-between;
 }
 
 @media (min-width: 768px) {
-  .container {
-    max-width: 768px;
+  .header {
+    font-size: 4.5rem;
   }
 
-  .next-event {
-    margin-left: 40%;
-    text-align: start;
+  .get-ticket {
+    padding: .5rem 2.5rem;
   }
 
-  .header-title {
-    position: absolute;
-    animation: moveFromInitial 2s ease-in forwards 2s;
+  .amenities {
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
+  .header {
+    font-size: 6rem;
   }
 
-  .description {
-    font-size: 2.3rem;
-    width: 80%;
-  }
-
-  .letter {
-    font-size: 5rem;
-  }
-
-  .lovesick-poster {
-    width: 30rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+  .info {
+    font-size: 3rem;
   }
 }
 </style>
