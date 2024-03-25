@@ -18,23 +18,23 @@
 
 :root {
   /* Primary */
-  --pink-vivid-300: '#F364A2';
-  --pink-vivid-400: '#E8368F';
+  --pink-vivid-300: #f364a2;
+  --pink-vivid-400: #e8368f;
 
   /* Neutrals */
-  --cool-grey-100: '#E4E7EB';
-  --cool-grey-050: '#F5F7FA';
-  --cool-grey-200: '#CBD2D9';
-  --cool-grey-300: '#9AA5B1';
-  --cool-grey-400: '#7B8794';
-  --cool-grey-500: '#616E7C';
-  --cool-grey-600: '#52606D';
-  --cool-grey-700: '#3E4C59';
-  --cool-grey-800: '#323F4B';
-  --cool-grey-900: '#1F2933';
+  --cool-grey-100: #e4e7eb;
+  --cool-grey-050: #f5f7fa;
+  --cool-grey-200: #cbd2d9;
+  --cool-grey-300: #9aa5b1;
+  --cool-grey-400: #7b8794;
+  --cool-grey-500: #616e7c;
+  --cool-grey-600: #52606d;
+  --cool-grey-700: #3e4c59;
+  --cool-grey-800: #323f4b;
+  --cool-grey-900: #1f2933;
 
   /* Supporting */
-  --red-vivid-050: '#FFE3E3';
+  --red-vivid-050: #ffe3e3;
 
   /* sizes */
   --size-xxs: 0.5rem;

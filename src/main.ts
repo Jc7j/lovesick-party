@@ -1,5 +1,5 @@
-import './styles/modern-normalize.css'
-import './styles/main.css'
+import './assets/modern-normalize.css'
+import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
