@@ -30,7 +30,6 @@ const { isMobile } = useMobile()
       <a class="" href="https://posh.vip/f/9ecc" target="_blank">
         <img src="/lovesick-poster.png" alt="lovesick promotional poster" />
       </a>
-
       <GetTicketButton />
     </div>
 
@@ -59,6 +58,7 @@ const { isMobile } = useMobile()
     </div>
 
     <BorderLine />
+
     <div class="amenities">
       <p>DJ'S</p>
       <p>DRINKS</p>
