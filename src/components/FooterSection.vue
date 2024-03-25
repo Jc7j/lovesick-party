@@ -4,13 +4,14 @@ import GmailSvg from './GmailSvg.vue'
 </script>
 
 <template>
-  <footer class="container section footer">
+  <footer class="container footer">
     <p>PRESENTED BY GANJI © 2024</p>
     <span>
       <InstagramSvg />
       <GmailSvg />
     </span>
-    <a href="https://github.com/Jc7j" target="_blank">BUILT BY JAHHSONC</a>
+    <a href="mailto:info@lovesickparty.com?subject=Come%20Play%20At%20Our%20Venue!" target="_blank">BOOK US FOR YOUR NEXT EVENT
+    !</a>
   </footer>
 </template>
 
@@ -18,12 +19,22 @@ import GmailSvg from './GmailSvg.vue'
 .footer {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   color: var(--pink-vivid-400);
   font-family: 'Clash Display', sans-serif;
+  margin-top: 2rem;
 }
 
 span {
   display: flex;
   gap: var(--size-base);
 }
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+  }
+}
+
 </style>

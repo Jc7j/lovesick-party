@@ -126,6 +126,13 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+}
+
+.desktop-main-display > div,
+.desktop-main-display > a {
+  flex: 1; 
+  text-align: center; 
 }
 
 .display-title {
