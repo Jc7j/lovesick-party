@@ -23,7 +23,8 @@ import GmailSvg from './GmailSvg.vue'
   align-items: center;
   color: var(--pink-vivid-400);
   font-family: 'Clash Display', sans-serif;
-  margin-top: 2rem;
+  margin-top: var(--size-base);
+  margin-bottom: var(--size-base);
 }
 
 span {

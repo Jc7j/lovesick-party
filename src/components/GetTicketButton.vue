@@ -8,7 +8,7 @@
 .get-ticket {
   border: 2px solid var(--pink-vivid-300);
   padding: var(--size-base) var(--size-7xl);
-  border-radius: 4rem;
+  border-radius: var(--size-6xl);
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
 
