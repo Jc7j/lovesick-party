@@ -131,8 +131,8 @@ a {
 
 .desktop-main-display > div,
 .desktop-main-display > a {
-  flex: 1; 
-  text-align: center; 
+  flex: 1;
+  text-align: center;
 }
 
 .display-title {

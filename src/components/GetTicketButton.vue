@@ -10,6 +10,7 @@
   padding: var(--size-base) var(--size-7xl);
   border-radius: var(--size-6xl);
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+  transition: background-color 0.3s ease;
 }
 
 .get-ticket:hover {

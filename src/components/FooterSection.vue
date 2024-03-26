@@ -10,8 +10,9 @@ import GmailSvg from './GmailSvg.vue'
       <InstagramSvg />
       <GmailSvg />
     </span>
-    <a href="mailto:info@lovesickparty.com?subject=Come%20Play%20At%20Our%20Venue!" target="_blank">BOOK US FOR YOUR NEXT EVENT
-    !</a>
+    <a href="mailto:info@lovesickparty.com?subject=Come%20Play%20At%20Our%20Venue!" target="_blank"
+      >BOOK US FOR YOUR NEXT EVENT !</a
+    >
   </footer>
 </template>
 
@@ -37,5 +38,4 @@ span {
     flex-direction: row;
   }
 }
-
 </style>
